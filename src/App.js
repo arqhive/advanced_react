@@ -1,28 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <h2>Labeling</h2>
+      <section>
+        HTML form 컨트롤 시에는 접근 가능하게 라벨을 지정해야한다.
+        <hr />
+        <label htmlFor="namedInput">Name: </label>
+        <input id="namedInput" type="text" name="name" />
+      </section>
+    </div>
+  );
 }
 
 export default App;

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Suspense, lazy } from "react";
+import MyContext from "./MyContext";
 
 const Advanced = lazy(() => import("./Advanced"));
 
@@ -7,6 +8,7 @@ const Advanced = lazy(() => import("./Advanced"));
 const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
+      <MyContext />
       <Switch>
         <Route exact path="/" component={Advanced} />
         <Route path="/Advanced" component={Advanced} />
